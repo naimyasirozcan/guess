@@ -10,14 +10,16 @@ submit.addEventListener('click', function () {
 
     let tahmin = document.querySelector('#guess')
 
-    if (tahmin.value === randomSayi) {
-        result.innerHTML = ('Good for you!')
+    if (tahmin.value == randomSayi) {
+        result.innerHTML = ("My number was " + randomSayi + "! Good for you! :)")
+        result.style.color = 'orangered'
     }
     else if (tahmin.value === '' || tahmin.value > 10) {
         result.innerHTML = ('Please enter a valid number!')
     }
     else {
         result.innerHTML = ("My number was " + randomSayi + ". Try again :(")
+        result.style.color = 'brown'
     }
     tahmin.value = ''
 })
